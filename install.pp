@@ -2,7 +2,7 @@
 # java_jre_32, zlib_32, sharutils, libuuid_32, ncompress, glibc, initscripts, 
 
 # set variable for pre req packages
-$ pre_req
+# $ pre_req
 
 # install all the pre req packages
 package { $pre_req:
@@ -16,15 +16,15 @@ file { '/opt/SYMSCAN':
   # owner 
   # permission
   # inform symncscan serivice
-  notify => Service ['symscan'],
+  notify => Service ['symcscan'],
   # require
   require => [Package [$pre_req]],
 }
 
 # make sure service is enabled and installed
-# enable systemd serviece for SPE as future improvement
+# future improvement - enable systemd serviec for SPE
 service { 'symcscan':
   ensure  => running,
   enable  => true,
-  require =>
+  require => [Package [$pre_req], File ['/opt/SYMSCAN']],
 }

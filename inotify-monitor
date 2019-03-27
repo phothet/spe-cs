@@ -1,0 +1,106 @@
+[root@mzp011c ~]# inotifywait -m /tmp
+Setting up watches.
+Watches established.
+/tmp/ MODIFY one.txt
+/tmp/ OPEN one.txt
+/tmp/ MODIFY one.txt
+/tmp/ CLOSE_WRITE,CLOSE one.txt
+/tmp/ CREATE one1.txt
+/tmp/ OPEN one1.txt
+/tmp/ ATTRIB one1.txt
+/tmp/ CLOSE_WRITE,CLOSE one1.txt
+/tmp/ MODIFY one1.txt
+/tmp/ OPEN one1.txt
+/tmp/ MODIFY one1.txt
+/tmp/ CLOSE_WRITE,CLOSE one1.txt
+
+
+
+/tmp/ OPEN one1.txt
+/tmp/ MODIFY one1.txt
+/tmp/ CLOSE_WRITE,CLOSE one1.txt
+
+
+
+/tmp/ CREATE two.txt
+/tmp/ OPEN two.txt
+/tmp/ ATTRIB two.txt
+/tmp/ CLOSE_WRITE,CLOSE two.txt
+
+
+
+/tmp/ CREATE .three.txt.swp
+/tmp/ OPEN .three.txt.swp
+/tmp/ CREATE .three.txt.swx
+/tmp/ OPEN .three.txt.swx
+/tmp/ CLOSE_WRITE,CLOSE .three.txt.swx
+/tmp/ DELETE .three.txt.swx
+/tmp/ CLOSE_WRITE,CLOSE .three.txt.swp
+/tmp/ DELETE .three.txt.swp
+/tmp/ CREATE .three.txt.swp
+/tmp/ OPEN .three.txt.swp
+/tmp/ MODIFY .three.txt.swp
+/tmp/ MODIFY .three.txt.swp
+/tmp/ CREATE three.txt
+/tmp/ OPEN three.txt
+/tmp/ MODIFY three.txt
+/tmp/ CLOSE_WRITE,CLOSE three.txt
+/tmp/ MODIFY .three.txt.swp
+/tmp/ CLOSE_WRITE,CLOSE .three.txt.swp
+/tmp/ DELETE .three.txt.swp
+
+
+
+/tmp/ CREATE .four.txt.swp
+/tmp/ OPEN .four.txt.swp
+/tmp/ CREATE .four.txt.swx
+/tmp/ OPEN .four.txt.swx
+/tmp/ CLOSE_WRITE,CLOSE .four.txt.swx
+/tmp/ DELETE .four.txt.swx
+/tmp/ CLOSE_WRITE,CLOSE .four.txt.swp
+/tmp/ DELETE .four.txt.swp
+/tmp/ CREATE .four.txt.swp
+/tmp/ OPEN .four.txt.swp
+/tmp/ MODIFY .four.txt.swp
+
+
+
+/tmp/ MODIFY .four.txt.swp
+/tmp/ MODIFY .four.txt.swp
+/tmp/ MODIFY .four.txt.swp
+
+
+
+
+/tmp/ MODIFY .four.txt.swp
+/tmp/ MODIFY .four.txt.swp
+/tmp/ MODIFY .four.txt.swp
+/tmp/ MODIFY .four.txt.swp
+/tmp/ CREATE four.txt
+/tmp/ OPEN four.txt
+/tmp/ MODIFY four.txt
+/tmp/ CLOSE_WRITE,CLOSE four.txt
+/tmp/ MODIFY .four.txt.swp
+/tmp/ CLOSE_WRITE,CLOSE .four.txt.swp
+/tmp/ DELETE .four.txt.swp
+/tmp/ OPEN,ISDIR 
+/tmp/ CLOSE_NOWRITE,CLOSE,ISDIR 
+
+
+
+
+^C
+[root@mzp011c ~]# inotifywait -m -e modify /tmp
+Setting up watches.
+Watches established.
+
+
+/tmp/ MODIFY .five.txt.swp
+/tmp/ MODIFY .five.txt.swp
+/tmp/ MODIFY five.txt
+/tmp/ MODIFY .five.txt.swp
+
+
+
+/tmp/ MODIFY six.txt
+/tmp/ MODIFY six.txt

@@ -1,0 +1,17 @@
+[cloud_user@mzp011c ~]$ touch /tmp/one.txt
+[cloud_user@mzp011c ~]$ echo "meee" > /tmp/one.txt 
+[cloud_user@mzp011c ~]$ echo "meee" > /tmp/one.txt 
+[cloud_user@mzp011c ~]$ touch /tmp/one1.txt
+[cloud_user@mzp011c ~]$ echo "meee" > /tmp/one1.txt 
+[cloud_user@mzp011c ~]$ echo "mee333e" >> /tmp/one1.txt 
+[cloud_user@mzp011c ~]$ touch /tmp/two.txt
+[cloud_user@mzp011c ~]$ 
+[cloud_user@mzp011c ~]$ 
+[cloud_user@mzp011c ~]$ vi /tmp/three.txt
+[cloud_user@mzp011c ~]$ 
+[cloud_user@mzp011c ~]$ 
+[cloud_user@mzp011c ~]$ vim /tmp/four.txt
+[cloud_user@mzp011c ~]$ vi /tmp/five.txt
+[cloud_user@mzp011c ~]$ echo "mee333e" >> /tmp/six.txt 
+[cloud_user@mzp011c ~]$ echo "mee333999e" >> /tmp/six.txt 
+[cloud_user@mzp011c ~]$ 

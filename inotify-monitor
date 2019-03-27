@@ -1,3 +1,10 @@
+[root@mzp011c ~]# inotifywait /tmp
+Setting up watches.
+Watches established.
+/tmp/ CREATE one.txt
+[root@mzp011c ~]# 
+[root@mzp011c ~]# 
+
 [root@mzp011c ~]# inotifywait -m /tmp
 Setting up watches.
 Watches established.

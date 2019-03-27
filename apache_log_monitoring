@@ -4,3 +4,27 @@ inotifywait -m -r -e create,modify,open,close_write --format '%w%f' "${MONITORDI
 do
         echo "File ${NEWFILE} has been updated" >> /tmp/updateme
 done
+
+tail -f /tmp/updateme 
+File /var/log/httpd/access_log has been updated
+File /var/log/httpd/access_log has been updated
+File /var/log/httpd/error_log has been updated
+File /var/log/httpd/access_log has been updated
+File /var/log/httpd/ has been updated
+File /var/log/httpd/ has been updated
+File /var/log/httpd/ has been updated
+File /var/log/httpd/ has been updated
+File /var/log/httpd/access_log has been updated
+File /var/log/httpd/access_log has been updated
+File /var/log/httpd/access_log has been updated
+File /var/log/httpd/access_log has been updated
+
+tail -f /var/log/httpd/access_log
+xxxxx.102 - - [26/Mar/2019:22:35:31 -0400] "GET /bbb HTTP/1.1" 404 201 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/15.0b13894 Mobile/16D57 Safari/605.1.15"
+xxxxx.102 - - [26/Mar/2019:22:43:47 -0400] "GET /bbbd HTTP/1.1" 404 202 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/15.0b13894 Mobile/16D57 Safari/605.1.15"
+xxxxx.102 - - [26/Mar/2019:22:43:57 -0400] "GET /bbbd HTTP/1.1" 404 202 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/15.0b13894 Mobile/16D57 Safari/605.1.15"
+xxxxx.102 - - [26/Mar/2019:22:44:06 -0400] "GET / HTTP/1.1" 403 3985 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/15.0b13894 Mobile/16D57 Safari/605.1.15"
+xxxxx.102 - - [26/Mar/2019:22:45:02 -0400] "GET /dndhdh HTTP/1.1" 404 204 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/15.0b13894 Mobile/16D57 Safari/605.1.15"
+xxxxx.102 - - [26/Mar/2019:22:45:29 -0400] "GET /dndhdhhhhf HTTP/1.1" 404 208 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/15.0b13894 Mobile/16D57 Safari/605.1.15"
+yyyyy.130 - - [26/Mar/2019:22:45:49 -0400] "GET /e HTTP/1.1" 404 199 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/15.0b13894 Mobile/16D57 Safari/605.1.15"
+
